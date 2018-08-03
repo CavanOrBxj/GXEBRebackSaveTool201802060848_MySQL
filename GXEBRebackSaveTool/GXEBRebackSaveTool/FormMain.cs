@@ -90,7 +90,8 @@ namespace GXEBRebackSaveTool
                 }
                 #endregion
 
-                m_mq.Close();//关闭MQ连接
+                //  m_mq.Close();//关闭MQ连接  注  进程中关闭的时候会有异常
+                System.Environment.Exit(0);
             }
             catch (Exception)
             {
